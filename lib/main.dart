@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'test1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -105,6 +107,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+        ElevatedButton(
+        child: Text('次へ'),
+        onPressed: () {
+          // ここにボタンを押した時に呼ばれるコードを書く
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => test1()),
+          );
+        },
+      ),
+
             const Text(
               'You have pushed the button this many times:',
             ),
